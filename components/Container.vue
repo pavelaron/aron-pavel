@@ -235,7 +235,7 @@
     <space-element :x="windowCenter.x - 10" :y="windowCenter.y + 3700">
       <div class="container-awards">
         <img class="img-awards" src="@/assets/images/other/awards.png" alt="Awards" />
-        <h3><u>Awards, acknowledgements</u></h3>
+        <h3 class="title-awards">Awards, acknowledgements</h3>
         <div class="desc-awards">
           <p>
             <strong>Scientific student conference (2010.) – II. place</strong><br />
@@ -339,6 +339,10 @@ img {
 
 .img-awards {
   width: 100px;
+}
+
+.title-awards {
+  text-decoration: underline;
 }
 
 .desc-awards {
