@@ -37,7 +37,7 @@ export default {
       { name: 'twitter:description', content: 'Mobile Application Developer' },
       { name: 'twitter:image', content: 'https://aron-pavel.web.app/img/logo.png' },
 
-      // Open Graph data -->
+      // Open Graph data
       { property: 'og:title', content: 'Aron Pavel' },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://aron-pavel.web.app' },

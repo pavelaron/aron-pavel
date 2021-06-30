@@ -9,8 +9,8 @@
     <!-- Introduction -->
     <space-element :x="windowCenter.x - 100" :y="windowCenter.y + 150">
       <progressive-img id="profile" :src="require('@/assets/images/me.jpg')" alt="Aron Pavel" />
-      <div class="intro">Aron Pavel</div>
-      <div class="intro">Mobile Application Developer</div>
+      <h1 class="intro">Aron Pavel</h1>
+      <h1 class="intro">Mobile Application Developer</h1>
     </space-element>
     <space-element :x="windowCenter.x - 40" :y="windowCenter.y + 500">
       <arrow :angle="180" />
@@ -325,7 +325,7 @@ img {
 }
 
 .intro {
-  margin-top: 5px;
+  font-size: 18px;
   text-align: center;
 }
 
