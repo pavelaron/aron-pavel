@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow:
+
+Sitemap: https://aron-pavel.web.app/sitemap.xml

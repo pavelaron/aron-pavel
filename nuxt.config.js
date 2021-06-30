@@ -108,6 +108,10 @@ export default {
     ]
   ],
 
+  generate: {
+    fallback: '404.html'
+  },
+
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
