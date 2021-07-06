@@ -19,6 +19,7 @@
   height: 100%;
   background-image: url('~/static/img/bg-space.jpg');
   background-repeat: repeat;
+  background-size: contain;
 }
 
 #ship {
