@@ -73,6 +73,7 @@ export default {
     },
     resetPosition () {
       this.$refs.space.reset()
+      this.$refs.ship.reset()
     },
     unsubscribe () {
       const { overlay, ship } = this.$refs

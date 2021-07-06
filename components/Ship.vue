@@ -57,6 +57,9 @@ export default {
     accelerate (value) {
       this.thrustersOn = value
       this.$store.commit('accelerate', value, { root: true })
+    },
+    reset () {
+      this.rotation = 180
     }
   }
 }
