@@ -58,9 +58,8 @@ export default {
       this.listenFor('mousemove', ship.rotate)
     },
     listenFor (event, callback) {
-      this.$refs.overlay.addEventListener(event, callback, supportsPassiveEvents
-        ? { passive: true }
-        : false)
+      const options = supportsPassiveEvents ? { passive: true } : false
+      this.$refs.overlay.addEventListener(event, callback, options)
     },
     removeListener (event, callback) {
       this.$refs.overlay.removeEventListener(event, callback)

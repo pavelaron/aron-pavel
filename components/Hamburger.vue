@@ -223,6 +223,10 @@ export default {
   font-family: sans-serif;
 }
 
+.swal2-container.swal2-backdrop-show {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .swal2-popup {
   flex-direction: column;
 }
@@ -236,6 +240,11 @@ export default {
 
 .swal2-input.subject {
   display: none;
+}
+
+.swal2-styled.swal2-confirm,
+.swal2-styled.swal2-cancel {
+  width: 100%;
 }
 
 textarea.swal2-input {
@@ -286,6 +295,11 @@ textarea.swal2-input {
 @media screen and (min-width: 768px) {
   .link-youtube {
     height: 200px;
+  }
+
+  .swal2-styled.swal2-confirm,
+  .swal2-styled.swal2-cancel {
+    width: auto;
   }
 }
 
