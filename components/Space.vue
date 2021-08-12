@@ -27,6 +27,9 @@ export default {
   data () {
     return {
       backgroundSize: 1920,
+      tilesMax: 0,
+      speedModifier: 0,
+      speedBoundSize: 0,
       contentBounds: {
         min: {
           x: 0,
@@ -48,6 +51,7 @@ export default {
     }
   },
   created () {
+    this.tilesMax = this.backgroundSize * 2
     this.unsubscribe = this.$store.subscribe((mutation) => {
       if (mutation.type === 'accelerate') {
         window.requestAnimationFrame(this.move)
@@ -79,15 +83,32 @@ export default {
           y: yMax + window.innerHeight * 2
         }
       }
+
+      this.speedBoundSize = Math.min(window.innerWidth, window.innerHeight) / 2
+      this.speedModifier = this.speedBoundSize / 4
     },
     move () {
       const heading = this.$store.state.heading
 
-      this.position.x = this.updateLocation('x', this.position.x - heading.x / 100)
-      this.position.y = this.updateLocation('y', this.position.y - heading.y / 100)
+      const xMax = this.speedBoundSize * Math.sign(heading.x)
+      const yMax = this.speedBoundSize * Math.sign(heading.y)
 
-      this.bgPosition.x = this.updateBackgroundLocation('x', heading)
-      this.bgPosition.y = this.updateBackgroundLocation('y', heading)
+      let dX = heading.x
+      let dY = heading.y
+
+      if (Math.abs(heading.x) > this.speedBoundSize) {
+        dX = xMax
+        dY *= xMax / heading.x
+      } else if (Math.abs(heading.y) > this.speedBoundSize) {
+        dX *= yMax / heading.y
+        dY = yMax
+      }
+
+      this.position.x = this.updateLocation('x', this.position.x - dX / this.speedModifier)
+      this.position.y = this.updateLocation('y', this.position.y - dY / this.speedModifier)
+
+      this.bgPosition.x = this.updateBackgroundLocation('x', dX / (this.speedModifier * 2))
+      this.bgPosition.y = this.updateBackgroundLocation('y', dY / (this.speedModifier * 2))
 
       if (this.$store.state.speed) {
         window.requestAnimationFrame(this.move)
@@ -102,14 +123,12 @@ export default {
 
       return value
     },
-    updateBackgroundLocation (axis, heading) {
-      const tilesMax = this.backgroundSize * 2
-
-      if (Math.abs(this.bgPosition[axis]) >= tilesMax) {
-        return this.bgPosition[axis] - tilesMax * Math.sign(this.bgPosition[axis])
+    updateBackgroundLocation (axis, diff) {
+      if (Math.abs(this.bgPosition[axis]) < this.tilesMax) {
+        return this.bgPosition[axis] - diff
       }
 
-      return this.bgPosition[axis] - heading[axis] / 200
+      return this.bgPosition[axis] - this.tilesMax * Math.sign(this.bgPosition[axis])
     },
     reset () {
       this.position = {
