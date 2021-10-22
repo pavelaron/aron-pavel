@@ -2,7 +2,7 @@
   <div class="experience">
     <div class="img" :style="{ 'background-image': `url('${logo}')` }"></div>
     <div class="centered">
-      <div>{{ interval }}</div>
+      <div>{{ interval }}</div>
       <h3>{{ company }}</h3>
       <div>Assignments:&nbsp;</div>
     </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="education">
     <div class="img" :style="{ 'background-image': `url('${image}')` }"></div>
-    <div>{{ interval }}</div>
+    <div>{{ interval }}</div>
     <h3>{{ school }}</h3>
     <p>{{ graduation }}</p>
   </div>
