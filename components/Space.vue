@@ -51,7 +51,7 @@ export default {
     }
   },
   created () {
-    this.tilesMax = this.backgroundSize * 2
+    this.tilesMax = this.backgroundSize * 2
     this.unsubscribe = this.$store.subscribe((mutation) => {
       if (mutation.type === 'accelerate') {
         window.requestAnimationFrame(this.move)
@@ -108,7 +108,7 @@ export default {
       this.position.y = this.updateLocation('y', this.position.y - dY / this.speedModifier)
 
       this.bgPosition.x = this.updateBackgroundLocation('x', dX / (this.speedModifier * 2))
-      this.bgPosition.y = this.updateBackgroundLocation('y', dY / (this.speedModifier * 2))
+      this.bgPosition.y = this.updateBackgroundLocation('y', dY / (this.speedModifier * 2))
 
       if (this.$store.state.speed) {
         window.requestAnimationFrame(this.move)

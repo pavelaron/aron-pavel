@@ -18,7 +18,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
       { name: 'theme-color', content: '#000000' },
 
-      { httpEquiv: 'X-UA-Compatible', content: 'IE=edge' },
+      { httpEquiv: 'X-UA-Compatible', content: 'IE=edge' },
       { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
 
       // Add to home screen for Safari on iOS
@@ -45,10 +45,10 @@ export default {
       { property: 'og:description', content: 'Mobile Application Developer' },
       { property: 'og:site_name', content: 'Aron Pavel' },
 
-      { name: 'dc.publisher', content: 'https://aron-pavel.web.app' },
-      { name: 'dc.language', content: 'en' },
-      { name: 'dc.title', content: 'Aron Pavel' },
-      { name: 'dc.description', content: 'Mobile Application Developer' }
+      { name: 'dc.publisher', content: 'https://aron-pavel.web.app' },
+      { name: 'dc.language', content: 'en' },
+      { name: 'dc.title', content: 'Aron Pavel' },
+      { name: 'dc.description', content: 'Mobile Application Developer' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/img/icons/favicon.ico' },
