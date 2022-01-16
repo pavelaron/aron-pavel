@@ -8,7 +8,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 #error {
   position: fixed;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

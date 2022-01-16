@@ -65,7 +65,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #ship {
   position: fixed;
   top: 50%;
