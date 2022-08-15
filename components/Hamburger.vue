@@ -34,8 +34,8 @@
           <span>Pasta &amp; olive oil wholesale business page</span>
         </p>
         <p class="website-item">
-          <a href="https://prohairclinica.it" rel="noopener" target="_blank">prohairclinica.it</a>
-          <span>Hair implant clinic homepage (Italian)</span>
+          <a href="https://prohair.hu" rel="noopener" target="_blank">prohair.hu</a>
+          <span>Hair implant clinic homepage</span>
         </p>
         <p class="website-item">
           <a href="https://dori-marci.appspot.com" rel="noopener" target="_blank">dori-marci.appspot.com</a>
