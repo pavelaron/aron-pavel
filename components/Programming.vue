@@ -1,15 +1,20 @@
 <template>
   <div class="container-programming">
-    <div class="icon-programming" :style="{
-      'background-image': `url(${src})`
-    }"></div>
-    <div class="programming-name" v-html="name"></div>
+    <div
+      class="icon-programming"
+      :style="{
+        'background-image': `url(${src})`
+      }"
+    />
+    <div class="programming-name">
+      {{ name }}
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'programming',
+  name: 'Programming',
   props: {
     src: {
       type: String,

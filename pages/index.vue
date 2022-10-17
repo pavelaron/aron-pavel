@@ -3,7 +3,7 @@
     <main :class="{ 'ios': $device.ios, 'pwa': isPWA }">
       <space ref="space" :content-window="contentWindow" />
       <ship ref="ship" :content-window="contentWindow" />
-      <div id="overlay" ref="overlay"></div>
+      <div id="overlay" ref="overlay" />
       <hamburger :onreset="resetPosition" />
     </main>
   </div>
@@ -17,7 +17,7 @@ import Ship from '@/components/Ship'
 import FirebaseHandler from '@/handlers/firebase-handler'
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
     Hamburger,
     Space,
@@ -41,6 +41,9 @@ export default {
     this.initControls()
 
     window.onresize = this.resize
+  },
+  beforeDestroy () {
+    this.unsubscribe()
   },
   methods: {
     initControls () {
@@ -88,9 +91,6 @@ export default {
       this.removeListener('mouseup', () => ship.accelerate(false))
       this.removeListener('mousemove', ship.rotate)
     }
-  },
-  beforeDestroy () {
-    this.unsubscribe()
   }
 }
 </script>

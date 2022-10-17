@@ -1,6 +1,6 @@
 <template>
   <div class="education">
-    <div class="img" :style="{ 'background-image': `url('${image}')` }"></div>
+    <div class="img" :style="{ 'background-image': `url('${image}')` }" />
     <div>{{ interval }}</div>
     <h3>{{ school }}</h3>
     <p>{{ graduation }}</p>
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'education',
+  name: 'Education',
   props: {
     image: {
       type: String,

@@ -1,6 +1,6 @@
 <template>
   <div class="experience">
-    <div class="img" :style="{ 'background-image': `url('${logo}')` }"></div>
+    <div class="img" :style="{ 'background-image': `url('${logo}')` }" />
     <div class="centered">
       <div>{{ interval }}</div>
       <h3>{{ company }}</h3>
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'experience',
+  name: 'Experience',
   props: {
     logo: {
       type: String,

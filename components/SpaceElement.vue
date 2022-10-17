@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'space-element',
+  name: 'SpaceElement',
   props: {
     x: {
       type: Number,

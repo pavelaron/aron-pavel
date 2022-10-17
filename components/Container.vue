@@ -9,8 +9,12 @@
     <!-- Introduction -->
     <space-element :x="windowCenter.x - 100" :y="windowCenter.y + 150">
       <progressive-img id="profile" :src="require('@/assets/images/me.jpg')" alt="Aron Pavel" />
-      <h1 class="intro">Aron Pavel</h1>
-      <h1 class="intro">Mobile Application Developer</h1>
+      <h1 class="intro">
+        Aron Pavel
+      </h1>
+      <h1 class="intro">
+        Mobile Application Developer
+      </h1>
     </space-element>
     <space-element :x="windowCenter.x - 40" :y="windowCenter.y + 500">
       <arrow :angle="180" />
@@ -42,7 +46,7 @@
     </space-element>
     <!-- Professional experience -->
     <space-element :x="windowCenter.x - 40" :y="windowCenter.y + 1200">
-      <p>Professional<br />Experience</p><arrow :angle="270" />
+      <p>Professional<br>Experience</p><arrow :angle="270" />
     </space-element>
     <space-element :x="windowCenter.x - 20" :y="windowCenter.y + 1500">
       <arrow :angle="180" :size="40" />
@@ -149,34 +153,34 @@
       <arrow :angle="180" :size="40" />
     </space-element>
     <space-element :x="windowCenter.x + 340" :y="windowCenter.y + 1900">
-      <project :src="require('@/assets/images/projects/fashionstreet.png')" title="Fashion Street"></project>
+      <project :src="require('@/assets/images/projects/fashionstreet.png')" title="Fashion Street" />
     </space-element>
     <space-element :x="windowCenter.x + 820" :y="windowCenter.y + 1800">
-      <project :src="require('@/assets/images/projects/vatera.png')" title="Vatera"></project>
+      <project :src="require('@/assets/images/projects/vatera.png')" title="Vatera" />
     </space-element>
     <space-element :x="windowCenter.x + 580" :y="windowCenter.y + 2200">
-      <project :src="require('@/assets/images/projects/generali-car.jpg')" title="Generali SMART autó"></project>
+      <project :src="require('@/assets/images/projects/generali-car.jpg')" title="Generali SMART autó" />
     </space-element>
     <space-element :x="windowCenter.x + 980" :y="windowCenter.y + 2100">
-      <project :src="require('@/assets/images/projects/generali-realestate.jpg')" title="Generali SMART ingatlan"></project>
+      <project :src="require('@/assets/images/projects/generali-realestate.jpg')" title="Generali SMART ingatlan" />
     </space-element>
     <space-element :x="windowCenter.x + 640" :y="windowCenter.y + 1900">
-      <project :src="require('@/assets/images/projects/robot-controller.jpg')" title="Robot Controller"></project>
+      <project :src="require('@/assets/images/projects/robot-controller.jpg')" title="Robot Controller" />
     </space-element>
     <space-element :x="windowCenter.x + 540" :y="windowCenter.y + 1650">
-      <project :src="require('@/assets/images/projects/ilandguide.jpg')" title="iLandGuide"></project>
+      <project :src="require('@/assets/images/projects/ilandguide.jpg')" title="iLandGuide" />
     </space-element>
     <space-element :x="windowCenter.x + 1100" :y="windowCenter.y + 1950">
-      <project :src="require('@/assets/images/projects/liligo.jpg')" title="Liligo"></project>
+      <project :src="require('@/assets/images/projects/liligo.jpg')" title="Liligo" />
     </space-element>
     <space-element :x="windowCenter.x + 780" :y="windowCenter.y + 2400">
-      <project :src="require('@/assets/images/projects/mit-sloan.jpg')" title="MIT Sloan"></project>
+      <project :src="require('@/assets/images/projects/mit-sloan.jpg')" title="MIT Sloan" />
     </space-element>
     <space-element :x="windowCenter.x + 1250" :y="windowCenter.y + 1700">
-      <project :src="require('@/assets/images/projects/pepsi-twist.jpg')" title="Pepsi TWIST Citrompótló"></project>
+      <project :src="require('@/assets/images/projects/pepsi-twist.jpg')" title="Pepsi TWIST Citrompótló" />
     </space-element>
     <space-element :x="windowCenter.x + 1100" :y="windowCenter.y + 2300">
-      <project :src="require('@/assets/images/projects/oranum.jpg')" title="Oranum"></project>
+      <project :src="require('@/assets/images/projects/oranum.jpg')" title="Oranum" />
     </space-element>
     <!-- Known programming languages & frameworks -->
     <space-element :x="windowCenter.x - 40" :y="windowCenter.y + 2200">
@@ -186,34 +190,34 @@
       <arrow :angle="180" :size="40" />
     </space-element>
     <space-element :x="windowCenter.x - 640" :y="windowCenter.y + 2200">
-      <programming :src="require('@/assets/images/programming/node-js.png')" name="Node JS"></programming>
+      <programming :src="require('@/assets/images/programming/node-js.png')" name="Node JS" />
     </space-element>
     <space-element :x="windowCenter.x - 440" :y="windowCenter.y + 2400">
-      <programming :src="require('@/assets/images/programming/flutter.png')" name="Flutter (Dart)"></programming>
+      <programming :src="require('@/assets/images/programming/flutter.png')" name="Flutter (Dart)" />
     </space-element>
     <space-element :x="windowCenter.x - 840" :y="windowCenter.y + 2500">
-      <programming :src="require('@/assets/images/programming/swift.png')" name="Swift"></programming>
+      <programming :src="require('@/assets/images/programming/swift.png')" name="Swift" />
     </space-element>
     <space-element :x="windowCenter.x - 1100" :y="windowCenter.y + 2100">
-      <programming :src="require('@/assets/images/programming/sass.png')" name="Sass"></programming>
+      <programming :src="require('@/assets/images/programming/sass.png')" name="Sass" />
     </space-element>
     <space-element :x="windowCenter.x - 1180" :y="windowCenter.y + 2400">
-      <programming :src="require('@/assets/images/programming/kotlin.png')" name="Kotlin"></programming>
+      <programming :src="require('@/assets/images/programming/kotlin.png')" name="Kotlin" />
     </space-element>
     <space-element :x="windowCenter.x - 640" :y="windowCenter.y + 2600">
-      <programming :src="require('@/assets/images/programming/react.png')" name="React &amp;<br>React Native"></programming>
+      <programming :src="require('@/assets/images/programming/react.png')" name="React &amp;<br>React Native" />
     </space-element>
     <space-element :x="windowCenter.x - 1300" :y="windowCenter.y + 2250">
-      <programming :src="require('@/assets/images/programming/angular.png')" name="Angular"></programming>
+      <programming :src="require('@/assets/images/programming/angular.png')" name="Angular" />
     </space-element>
     <space-element :x="windowCenter.x - 900" :y="windowCenter.y + 2300">
-      <programming :src="require('@/assets/images/programming/vue.png')" name="Vue JS"></programming>
+      <programming :src="require('@/assets/images/programming/vue.png')" name="Vue JS" />
     </space-element>
     <space-element :x="windowCenter.x - 1350" :y="windowCenter.y + 2550">
-      <programming :src="require('@/assets/images/programming/php.png')" name="PHP"></programming>
+      <programming :src="require('@/assets/images/programming/php.png')" name="PHP" />
     </space-element>
     <space-element :x="windowCenter.x - 1100" :y="windowCenter.y + 2600">
-      <programming :src="require('@/assets/images/programming/python.png')" name="Python"></programming>
+      <programming :src="require('@/assets/images/programming/python.png')" name="Python" />
     </space-element>
     <!-- Other skills & abilities -->
     <space-element :x="windowCenter.x - 40" :y="windowCenter.y + 2700">
@@ -223,30 +227,34 @@
       <div>Spoken languages:</div>
     </space-element>
     <space-element :x="windowCenter.x - 80" :y="windowCenter.y + 3300">
-      <img src="@/assets/images/other/flag-uk.gif" alt="English" />
+      <img src="@/assets/images/other/flag-uk.gif" alt="English">
     </space-element>
     <space-element :x="windowCenter.x - 20" :y="windowCenter.y + 3450">
-      <img src="@/assets/images/other/flag-france.gif" alt="French" />
+      <img src="@/assets/images/other/flag-france.gif" alt="French">
     </space-element>
     <space-element :x="windowCenter.x - 400" :y="windowCenter.y + 3500">
-      <img class="img-license" src="@/assets/images/other/license.jpg" alt="Driver's license" />
-      <div class="desc-license">Driver's license:​ B category, acquired in 2002.</div>
+      <img class="img-license" src="@/assets/images/other/license.jpg" alt="Driver's license">
+      <div class="desc-license">
+        Driver's license: B category, acquired in 2002.
+      </div>
     </space-element>
     <space-element :x="windowCenter.x - 10" :y="windowCenter.y + 3700">
       <div class="container-awards">
-        <img class="img-awards" src="@/assets/images/other/awards.png" alt="Awards" />
-        <h3 class="title-awards">Awards, acknowledgements</h3>
+        <img class="img-awards" src="@/assets/images/other/awards.png" alt="Awards">
+        <h3 class="title-awards">
+          Awards, acknowledgements
+        </h3>
         <div class="desc-awards">
           <p>
-            <strong>Scientific student conference (2010.) – II. place</strong><br />
+            <strong>Scientific student conference (2010.) – II. place</strong><br>
             Artwork: Intelligent, Wireless Scoliosis Diagnostic and Measurement System Development.
           </p>
           <p>
-            <strong>T-Mobile, MobilNet II. Competition (2009.) – II. place</strong><br />
+            <strong>T-Mobile, MobilNet II. Competition (2009.) – II. place</strong><br>
             Artwork: SMS sending using the Braille alphabet.
           </p>
           <p>
-            <strong>Scientific student conference (2008.) – II. place</strong><br />
+            <strong>Scientific student conference (2008.) – II. place</strong><br>
             Artwork: Development of a software based color temperature measuring device for mobile phones.
           </p>
         </div>
@@ -264,7 +272,7 @@ import Project from '@/components/Project'
 import Programming from '@/components/Programming'
 
 export default {
-  name: 'container',
+  name: 'Container',
   components: {
     SpaceElement,
     Arrow,

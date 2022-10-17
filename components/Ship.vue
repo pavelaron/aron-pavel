@@ -2,8 +2,8 @@
   <div>
     <div id="ship" :style="{ 'transform': `translate(-50%, -50%) rotate(${rotation}deg)` }">
       <div v-if="thrustersOn" id="container-exhaust" :style="{ 'height': `${exhaustLength}px` }">
-        <div class="exhaust left"></div>
-        <div class="exhaust right"></div>
+        <div class="exhaust left" />
+        <div class="exhaust right" />
       </div>
     </div>
   </div>
@@ -11,11 +11,14 @@
 
 <script>
 export default {
-  name: 'ship',
-  props: ['contentWindow'],
-  watch: {
-    contentWindow () {
-      this.resize()
+  name: 'Ship',
+  props: {
+    contentWindow: {
+      type: Object,
+      default: () => ({
+        width: 0,
+        height: 0
+      })
     }
   },
   data () {
@@ -27,6 +30,11 @@ export default {
         x: 0,
         y: 0
       }
+    }
+  },
+  watch: {
+    contentWindow () {
+      this.resize()
     }
   },
   mounted () {

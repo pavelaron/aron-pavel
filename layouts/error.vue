@@ -2,7 +2,7 @@
   <div id="error">
     <div id="message">
       <h1>Error 404</h1>
-      <div id="ship"></div>
+      <div id="ship" />
       <h2>Page not found</h2>
     </div>
   </div>

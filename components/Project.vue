@@ -1,16 +1,21 @@
 <template>
   <div class="container-project">
-    <div class="icon-project" :style="{
-      'background-image': `url(${src})`
-    }"></div>
-    <div class="title-project">{{ title }}</div>
+    <div
+      class="icon-project"
+      :style="{
+        'background-image': `url(${src})`
+      }"
+    />
+    <div class="title-project">
+      {{ title }}
+    </div>
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'project',
+  name: 'Project',
   props: {
     src: {
       type: String,

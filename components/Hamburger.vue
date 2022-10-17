@@ -1,16 +1,23 @@
 <template>
   <div class="container-menu" :class="{ 'active': menuOpen }">
     <div class="container-hamburger" @click="menuOpen = !menuOpen">
-      <div v-for="index in 3" :key="index" class="line" :class="`line-${index}`"></div>
+      <div v-for="index in 3" :key="index" class="line" :class="`line-${index}`" />
     </div>
     <div class="container-list">
       <github-ribbon user="pavelaron" />
-      <a rel="noopener" class="menu-item" href="" @click.prevent="reset" target="_blank">Reset position</a>
-      <a rel="noopener" class="menu-item" v-if="$store.state.cvUrl" @click="downloadCV" :href="$store.state.cvUrl" target="_blank">
+      <a rel="noopener" class="menu-item" href="" target="_blank" @click.prevent="reset">Reset position</a>
+      <a
+        v-if="$store.state.cvUrl"
+        rel="noopener"
+        class="menu-item"
+        :href="$store.state.cvUrl"
+        target="_blank"
+        @click="downloadCV"
+      >
         Download CV
       </a>
-      <a rel="noopener" class="menu-item" href="" @click.prevent="works" target="_blank">Other works</a>
-      <a rel="noopener" class="menu-item" href="" @click.prevent="contact" target="_blank">Contact</a>
+      <a rel="noopener" class="menu-item" href="" target="_blank" @click.prevent="works">Other works</a>
+      <a rel="noopener" class="menu-item" href="" target="_blank" @click.prevent="contact">Contact</a>
     </div>
 
     <div v-show="false">
@@ -19,7 +26,7 @@
           <input type="text" name="name" class="swal2-input name" placeholder="Name" required>
           <input type="email" name="email" class="swal2-input email" placeholder="Email" required>
           <input type="text" name="subject" class="swal2-input subject" placeholder="Subject">
-          <textarea name="message" class="swal2-input message" placeholder="Message" required></textarea>
+          <textarea name="message" class="swal2-input message" placeholder="Message" required />
         </form>
       </div>
 
@@ -46,7 +53,7 @@
           <span>Mechanical engineering firm landing page</span>
         </p>
         <h3>BlueSpeed</h3>
-        <a class="link-youtube" href="https://www.youtube.com/watch?v=_1kk1unkMIE" rel="noopener" target="_blank"></a>
+        <a class="link-youtube" href="https://www.youtube.com/watch?v=_1kk1unkMIE" rel="noopener" target="_blank" />
       </div>
     </div>
   </div>
@@ -57,15 +64,15 @@ import GithubRibbon from '@/components/GithubRibbon'
 import MailHandler from '@/handlers/mail-handler'
 
 export default {
-  name: 'hamburger',
+  name: 'Hamburger',
+  components: {
+    GithubRibbon
+  },
   props: {
     onreset: {
       type: Function,
       default: () => {}
     }
-  },
-  components: {
-    GithubRibbon
   },
   data () {
     return {
@@ -97,7 +104,7 @@ export default {
         showLoaderOnConfirm: true,
         allowOutsideClick: () => !this.$swal.isLoading(),
         preConfirm: async () => {
-          const form = Object.values(document.forms).find((item) => (
+          const form = Object.values(document.forms).find(item => (
             item.parentElement.id === 'swal2-content'
           ))
 

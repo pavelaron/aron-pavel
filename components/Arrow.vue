@@ -1,14 +1,17 @@
 <template>
-  <div id="arrow" :style="{
-    'width': `${size}px`,
-    'height': `${size}px`,
-    'transform': `rotate(${angle}deg)`
-  }"></div>
+  <div
+    id="arrow"
+    :style="{
+      'width': `${size}px`,
+      'height': `${size}px`,
+      'transform': `rotate(${angle}deg)`
+    }"
+  />
 </template>
 
 <script>
 export default {
-  name: 'arrow',
+  name: 'Arrow',
   props: {
     angle: {
       type: Number,

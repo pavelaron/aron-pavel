@@ -1,5 +1,5 @@
 export default class FirebaseHandler {
-  static async init (app) {
+  static init (app) {
     app.$fire.analytics.setAnalyticsCollectionEnabled(true)
   }
 
