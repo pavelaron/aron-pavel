@@ -1,11 +1,17 @@
 <template>
-  <div id="space" :style="{
-    'background-size': `${backgroundSize / 2}px`,
-    'background-position': `${bgPosition.x}px ${bgPosition.y}px`
-  }">
-    <container ref="container" :style="{
-      'transform': `translate3d(${position.x}px, ${position.y}px, 0)`
-    }" />
+  <div
+    id="space"
+    :style="{
+      'background-size': `${backgroundSize / 2}px`,
+      'background-position': `${bgPosition.x}px ${bgPosition.y}px`
+    }"
+  >
+    <container
+      ref="container"
+      :style="{
+        'transform': `translate3d(${position.x}px, ${position.y}px, 0)`
+      }"
+    />
   </div>
 </template>
 
@@ -14,14 +20,17 @@ import Container from '@/components/Container'
 import SpaceElement from '@/components/SpaceElement'
 
 export default {
-  name: 'space',
-  props: ['contentWindow'],
+  name: 'Space',
   components: {
     Container
   },
-  watch: {
-    contentWindow () {
-      this.setContentBounds()
+  props: {
+    contentWindow: {
+      type: Object,
+      default: () => ({
+        width: 0,
+        height: 0
+      })
     }
   },
   data () {
@@ -50,28 +59,36 @@ export default {
       }
     }
   },
+  watch: {
+    contentWindow () {
+      this.setContentBounds()
+    }
+  },
   created () {
     this.tilesMax = this.backgroundSize * 2
     this.unsubscribe = this.$store.subscribe((mutation) => {
       if (mutation.type === 'accelerate') {
-        window.requestAnimationFrame(this.move)
+        requestAnimationFrame(this.move)
       }
     })
   },
   mounted () {
     this.setContentBounds()
   },
+  beforeDestroy () {
+    this.unsubscribe()
+  },
   methods: {
     setContentBounds () {
-      const spaceElements = this.$refs.container.$children.filter((child) => (
+      const spaceElements = this.$refs.container.$children.filter(child => (
         child.$options.name === SpaceElement.name
       ))
 
-      const xMin = Math.min(...spaceElements.map((element) => element.x))
-      const yMin = Math.min(...spaceElements.map((element) => element.y))
+      const xMin = Math.min(...spaceElements.map(element => element.x))
+      const yMin = Math.min(...spaceElements.map(element => element.y))
 
-      const xMax = Math.max(...spaceElements.map((element) => element.x + element.$el.clientWidth))
-      const yMax = Math.max(...spaceElements.map((element) => element.y + element.$el.clientHeight))
+      const xMax = Math.max(...spaceElements.map(element => element.x + element.$el.clientWidth))
+      const yMax = Math.max(...spaceElements.map(element => element.y + element.$el.clientHeight))
 
       this.contentBounds = {
         min: {
@@ -141,9 +158,6 @@ export default {
         y: 0
       }
     }
-  },
-  beforeDestroy () {
-    this.unsubscribe()
   }
 }
 </script>

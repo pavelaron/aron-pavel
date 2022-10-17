@@ -87,6 +87,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    'vue-sweetalert2',
     [
       '@nuxtjs/firebase',
       {
