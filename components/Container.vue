@@ -205,7 +205,7 @@
       <programming :src="require('@/assets/images/programming/kotlin.png')" name="Kotlin" />
     </space-element>
     <space-element :x="windowCenter.x - 640" :y="windowCenter.y + 2600">
-      <programming :src="require('@/assets/images/programming/react.png')" name="React &amp;<br>React Native" />
+      <programming :src="require('@/assets/images/programming/react.png')" :name="`React\nReact Native`" />
     </space-element>
     <space-element :x="windowCenter.x - 1300" :y="windowCenter.y + 2250">
       <programming :src="require('@/assets/images/programming/angular.png')" name="Angular" />

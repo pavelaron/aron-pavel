@@ -7,7 +7,7 @@
       }"
     />
     <div class="programming-name">
-      {{ name }}
+      <span class="name-text">{{ name }}</span>
     </div>
   </div>
 </template>
@@ -41,6 +41,10 @@ export default {
 .programming-name {
   color: white;
   text-align: center;
+}
+
+.name-text {
+  white-space: pre;
 }
 
 @keyframes lds-rotate {
