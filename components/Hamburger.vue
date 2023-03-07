@@ -261,6 +261,10 @@ textarea.swal2-input {
   resize: vertical;
 }
 
+.swal2-actions {
+  justify-content: center;
+}
+
 .website-item a,
 .website-item a:visited,
 .website-item a:active {
