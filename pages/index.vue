@@ -33,8 +33,10 @@ export default {
     }
   },
   async created () {
-    FirebaseHandler.init(this)
-    this.$store.state.cvUrl = await FirebaseHandler.getCvUrl(this)
+    const firebaseHandler = new FirebaseHandler(this)
+    const cvUrl = await firebaseHandler.getCvUrl(this)
+
+    this.$store.commit('setCvUrl', cvUrl)
   },
   mounted () {
     this.resize()
