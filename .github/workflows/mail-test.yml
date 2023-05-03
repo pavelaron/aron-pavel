@@ -13,7 +13,7 @@ jobs:
       - name: Send test mail
         uses: wei/curl@v1.1.1
         with:
-          curl: |
+          args: |
             --location 'https://script.google.com/macros/s/{{ secrets.GAS_ID }}/exec' \
             --header 'Content-Type: application/x-www-form-urlencoded' \
             --data-urlencode 'name=Test Bot' \
