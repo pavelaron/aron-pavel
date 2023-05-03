@@ -1,0 +1,21 @@
+name: Mail test
+
+on:
+  schedule:
+    - cron: "0 12 1 * *"
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Run test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send test mail
+        uses: wei/curl@v1.1.1
+        with:
+          curl: |
+            --location 'https://script.google.com/macros/s/{{ secrets.GAS_ID }}/exec' \
+            --header 'Content-Type: application/x-www-form-urlencoded' \
+            --data-urlencode 'name=Test Bot' \
+            --data-urlencode 'email=test.bot@github.com' \
+            --data-urlencode 'message=Mail sent successfully!'
