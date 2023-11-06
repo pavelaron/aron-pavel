@@ -234,6 +234,11 @@ export default {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.swal2-title,
+.swal2-html-container {
+  text-align: center;
+}
+
 .swal2-popup {
   flex-direction: column;
 }
@@ -251,7 +256,7 @@ export default {
 
 .swal2-styled.swal2-confirm,
 .swal2-styled.swal2-cancel {
-  width: 100%;
+  min-width: 200px;
 }
 
 textarea.swal2-input {
