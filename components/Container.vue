@@ -233,7 +233,7 @@
       <img src="@/assets/images/other/flag-france.gif" alt="French">
     </space-element>
     <space-element :x="windowCenter.x - 400" :y="windowCenter.y + 3500">
-      <img class="img-license" src="@/assets/images/other/license.jpg" alt="Driver's license">
+      <img class="img-license" src="@/assets/images/other/license.png" alt="Driver's license">
       <div class="desc-license">
         Driver's license: B category, acquired in 2002.
       </div>
