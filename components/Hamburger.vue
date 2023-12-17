@@ -45,7 +45,7 @@
           <span>Hair implant clinic homepage</span>
         </p>
         <p class="website-item">
-          <a href="https://dori-marci.appspot.com" rel="noopener" target="_blank">dori-marci.appspot.com</a>
+          <a href="https://dori-marci.web.app" rel="noopener" target="_blank">dori-marci.web.app</a>
           <span>Wedding page</span>
         </p>
         <p class="website-item">
