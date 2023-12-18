@@ -291,7 +291,7 @@ textarea.swal2-input {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url('https://i.ytimg.com/vi/_1kk1unkMIE/maxresdefault.jpg');
+  background-image: url('~@/assets/images/other/bg-video.jpg');
 }
 
 .link-youtube:after {
