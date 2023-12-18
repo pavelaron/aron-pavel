@@ -53,7 +53,7 @@
           <span>Mechanical engineering firm landing page</span>
         </p>
         <h3>BlueSpeed</h3>
-        <a class="link-youtube" href="https://www.youtube.com/watch?v=_1kk1unkMIE" rel="noopener" target="_blank" />
+        <a class="link-video-bluespeed" href="https://www.youtube.com/watch?v=_1kk1unkMIE" rel="noopener" target="_blank" />
       </div>
     </div>
   </div>
@@ -282,7 +282,7 @@ textarea.swal2-input {
   font-size: 14px;
 }
 
-.link-youtube {
+.link-video-bluespeed {
   position: relative;
   display: block;
   width: 100%;
@@ -294,7 +294,7 @@ textarea.swal2-input {
   background-image: url('~@/assets/images/other/bg-video.jpg');
 }
 
-.link-youtube:after {
+.link-video-bluespeed:after {
   content: '';
   position: absolute;
   width: 80px;
@@ -309,7 +309,7 @@ textarea.swal2-input {
 }
 
 @media screen and (min-width: 768px) {
-  .link-youtube {
+  .link-video-bluespeed {
     height: 200px;
   }
 
