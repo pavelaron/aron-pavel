@@ -4,7 +4,7 @@ export default class MailHandler {
   static async sendMail (data, id) {
     const { name, email, subject, message } = data
 
-    if (subject) {
+    if (subject.value) {
       return {
         data: {
           message: 'Message sent successfully!'
@@ -12,18 +12,12 @@ export default class MailHandler {
       }
     }
 
-    if (!name || !email || !message) {
+    if (!name.value || !email.value || !message.value) {
       throw new Error('incomplete form')
     }
 
     const url = `https://script.google.com/macros/s/${id}/exec`
-    const formData = new FormData()
-
-    formData.append('name', name)
-    formData.append('email', email)
-    formData.append('message', message)
-
-    const result = await axios.post(url, formData, {
+    const result = await axios.post(url, new FormData(data), {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
       }

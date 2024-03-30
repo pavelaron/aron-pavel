@@ -108,20 +108,15 @@ export default {
             item.parentElement.id === 'swal2-content'
           ))
 
-          const formData = {
-            name: form.name.value,
-            email: form.email.value,
-            subject: form.subject.value,
-            message: form.message.value
-          }
+          const { name, email, subject, message } = form
 
-          if (!formData.name || !formData.email || !formData.message) {
+          if (!name.value || !email.value || !message.value) {
             this.$swal.showValidationMessage('Please fill in all fields!')
             return false
           }
 
           try {
-            const result = await MailHandler.sendMail(formData, this.$config.gasId)
+            const result = await MailHandler.sendMail(form, this.$config.gasId)
             this.$swal.fire('Thank you!', result.data.message, 'success')
           } catch (error) {
             this.$swal.showValidationMessage('Failed to send message. Please try again!')
