@@ -108,7 +108,7 @@ export default {
             item.parentElement.id === 'swal2-content'
           ))
 
-          const { name, email, subject, message } = form
+          const { name, email, message } = form
 
           if (!name.value || !email.value || !message.value) {
             this.$swal.showValidationMessage('Please fill in all fields!')

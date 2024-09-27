@@ -53,12 +53,12 @@
     </space-element>
     <space-element :x="windowCenter.x - 840" :y="windowCenter.y + 1200">
       <experience
-        :logo="require('@/assets/images/experience/logo-rr.png')"
-        interval="January 2019 – April 2020"
-        company="Backend/iOS developer position at Revolution Robotics Foundation"
+        :logo="require('@/assets/images/experience/logo-splendex.png')"
+        interval="May 2021 - July 2024"
+        company="Full stack developer position at Splendex Ltd."
         :assignments="[
-          'Development of Robot Controller mobile app (iOS / React Native).',
-          'Development of API serving the mobile apps in Node JS'
+          'Working on Mobile development (mostly React Native) projects.',
+          'Development of an AI digital signage software for Raspberry Pi devices.'
         ]"
       />
     </space-element>
@@ -67,12 +67,12 @@
     </space-element>
     <space-element :x="windowCenter.x - 1340" :y="windowCenter.y + 1200">
       <experience
-        :logo="require('@/assets/images/experience/logo-black-swan.png')"
-        interval="October 2015 – June 2018"
-        company="Front-end/iOS developer position at Black Swan Data"
+        :logo="require('@/assets/images/experience/logo-rr.png')"
+        interval="January 2019 - April 2020"
+        company="Backend/iOS developer position at Revolution Robotics Foundation"
         :assignments="[
-          'Development of in-flight entertainment system portals (front-end & iOS).',
-          'Development of a fitness app (iOS - written in Obj-C & Swift)'
+          'Development of Robot Controller mobile app (iOS / React Native).',
+          'Development of API serving the mobile apps in Node JS'
         ]"
       />
     </space-element>
@@ -81,11 +81,12 @@
     </space-element>
     <space-element :x="windowCenter.x - 1840" :y="windowCenter.y + 1200">
       <experience
-        :logo="require('@/assets/images/experience/logo-virgo.jpg')"
-        interval="October 2013 – May 2015"
-        company="Android developer position at Virgo Systems Ltd. (Canecom-Virgo agreement)"
+        :logo="require('@/assets/images/experience/logo-black-swan.png')"
+        interval="October 2015 - June 2018"
+        company="Front-end/iOS developer position at Black Swan Data"
         :assignments="[
-          'Android application development for Swiss clients.'
+          'Development of in-flight entertainment system portals (front-end & iOS).',
+          'Development of a fitness app (iOS - written in Obj-C & Swift)'
         ]"
       />
     </space-element>
@@ -94,12 +95,11 @@
     </space-element>
     <space-element :x="windowCenter.x - 2340" :y="windowCenter.y + 1200">
       <experience
-        :logo="require('@/assets/images/experience/logo-canecom.png')"
-        interval="August 2012 – June 2015"
-        company="Android developer position at Canecom Ltd."
+        :logo="require('@/assets/images/experience/logo-virgo.jpg')"
+        interval="October 2013 - May 2015"
+        company="Android developer position at Virgo Systems Ltd. (Canecom-Virgo agreement)"
         :assignments="[
-          'Android application development and testing for clients',
-          'Mobilessence application development and testing.'
+          'Android application development for Swiss clients.'
         ]"
       />
     </space-element>
@@ -108,13 +108,12 @@
     </space-element>
     <space-element :x="windowCenter.x - 2840" :y="windowCenter.y + 1200">
       <experience
-        :logo="require('@/assets/images/experience/logo-artklikk.jpg')"
-        interval="February 2012 – June 2012"
-        company="Android developer position at Artklikk Ltd."
+        :logo="require('@/assets/images/experience/logo-canecom.png')"
+        interval="August 2012 - June 2015"
+        company="Android developer position at Canecom Ltd."
         :assignments="[
-          'Development of an HTML editor for an online mobile application deployment interface',
-          'Web page editing',
-          'Creating Paypal payment transaction systems.'
+          'Android application development and testing for clients',
+          'Mobilessence application development and testing.'
         ]"
       />
     </space-element>
@@ -123,12 +122,13 @@
     </space-element>
     <space-element :x="windowCenter.x - 3340" :y="windowCenter.y + 1200">
       <experience
-        :logo="require('@/assets/images/experience/logo-salus.jpg')"
-        interval="November 2010 – April 2011"
-        company="Developer position at Salus Orthopédtechnika Ltd."
+        :logo="require('@/assets/images/experience/logo-artklikk.jpg')"
+        interval="February 2012 - June 2012"
+        company="Android developer position at Artklikk Ltd."
         :assignments="[
-          'Writing development reports',
-          'Creating a body scanning software for the production of scoliosis healing corsettes in Java (J2ME) language.'
+          'Development of an HTML editor for an online mobile application deployment interface',
+          'Web page editing',
+          'Creating Paypal payment transaction systems.'
         ]"
       />
     </space-element>
@@ -137,8 +137,22 @@
     </space-element>
     <space-element :x="windowCenter.x - 3840" :y="windowCenter.y + 1200">
       <experience
+        :logo="require('@/assets/images/experience/logo-salus.jpg')"
+        interval="November 2010 - April 2011"
+        company="Developer position at Salus Orthopédtechnika Ltd."
+        :assignments="[
+          'Writing development reports',
+          'Creating a body scanning software for the production of scoliosis healing corsettes in Java (J2ME) language.'
+        ]"
+      />
+    </space-element>
+    <space-element :x="windowCenter.x - 3980" :y="windowCenter.y + 1400">
+      <arrow :angle="270" :size="40" />
+    </space-element>
+    <space-element :x="windowCenter.x - 4340" :y="windowCenter.y + 1200">
+      <experience
         :logo="require('@/assets/images/education/bme.png')"
-        interval="August 2010 – April 2011"
+        interval="August 2010 - April 2011"
         company="Mobile software developer position at the Technical University of Budapest. – Spineguard project"
         :assignments="[
           'Development, testing and design supervision of a mobile spinal mouse (tool for diagnosing scoliosis) application for Symbian devices (in Python S60 language).'
@@ -162,13 +176,13 @@
       <project :src="require('@/assets/images/projects/generali-car.jpg')" title="Generali SMART autó" />
     </space-element>
     <space-element :x="windowCenter.x + 980" :y="windowCenter.y + 2100">
-      <project :src="require('@/assets/images/projects/generali-realestate.jpg')" title="Generali SMART ingatlan" />
+      <project :src="require('@/assets/images/projects/compocity.png')" title="Compocity" />
     </space-element>
     <space-element :x="windowCenter.x + 640" :y="windowCenter.y + 1900">
       <project :src="require('@/assets/images/projects/robot-controller.jpg')" title="Robot Controller" />
     </space-element>
     <space-element :x="windowCenter.x + 540" :y="windowCenter.y + 1650">
-      <project :src="require('@/assets/images/projects/ilandguide.jpg')" title="iLandGuide" />
+      <project :src="require('@/assets/images/projects/forbes.png')" title="Forbes Business Club" />
     </space-element>
     <space-element :x="windowCenter.x + 1100" :y="windowCenter.y + 1950">
       <project :src="require('@/assets/images/projects/liligo.jpg')" title="Liligo" />
@@ -180,7 +194,7 @@
       <project :src="require('@/assets/images/projects/pepsi-twist.jpg')" title="Pepsi TWIST Citrompótló" />
     </space-element>
     <space-element :x="windowCenter.x + 1100" :y="windowCenter.y + 2300">
-      <project :src="require('@/assets/images/projects/oranum.jpg')" title="Oranum" />
+      <project :src="require('@/assets/images/projects/digital-signage.png')" title="Digital Signage" />
     </space-element>
     <!-- Known programming languages & frameworks -->
     <space-element :x="windowCenter.x - 40" :y="windowCenter.y + 2200">
@@ -209,6 +223,9 @@
     </space-element>
     <space-element :x="windowCenter.x - 1300" :y="windowCenter.y + 2250">
       <programming :src="require('@/assets/images/programming/angular.png')" name="Angular" />
+    </space-element>
+    <space-element :x="windowCenter.x - 850" :y="windowCenter.y + 2050">
+      <programming :src="require('@/assets/images/programming/golang.png')" name="Golang" />
     </space-element>
     <space-element :x="windowCenter.x - 900" :y="windowCenter.y + 2300">
       <programming :src="require('@/assets/images/programming/vue.png')" name="Vue JS" />
