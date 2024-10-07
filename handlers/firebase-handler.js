@@ -3,10 +3,7 @@ export default class FirebaseHandler {
     app.$fire.analytics.setAnalyticsCollectionEnabled(true)
   }
 
-  async getCvUrl (app) {
-    const ref = app.$fire.storage.ref('CV - Pável Áron.pdf')
-    const cvUrl = await ref.getDownloadURL()
-
-    return cvUrl
+  logEvent (app, event) {
+    app.$fire.analytics.logEvent(event)
   }
 }

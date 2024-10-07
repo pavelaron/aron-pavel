@@ -102,7 +102,6 @@ export default {
           measurementId: 'G-N7B65T69F4'
         },
         services: {
-          storage: true,
           analytics: true
         }
       }

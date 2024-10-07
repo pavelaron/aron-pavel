@@ -7,10 +7,10 @@
       <github-ribbon user="pavelaron" />
       <a rel="noopener" class="menu-item" href="" target="_blank" @click.prevent="reset">Reset position</a>
       <a
-        v-if="$store.state.cvUrl"
         rel="noopener"
         class="menu-item"
-        :href="$store.state.cvUrl"
+        download="CV - Pável Áron.pdf"
+        href="/cv/aron-pavel-cv.pdf"
         target="_blank"
         @click="downloadCV"
       >
@@ -76,7 +76,6 @@ export default {
   },
   data () {
     return {
-      cvUrl: null,
       menuOpen: false
     }
   },

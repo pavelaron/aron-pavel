@@ -83,9 +83,9 @@
       <experience
         :logo="require('@/assets/images/experience/logo-black-swan.png')"
         interval="October 2015 - June 2018"
-        company="Front-end/iOS developer position at Black Swan Data"
+        company="Frontend/iOS developer position at Black Swan Data"
         :assignments="[
-          'Development of in-flight entertainment system portals (front-end & iOS).',
+          'Development of in-flight entertainment system portals (frontend & iOS).',
           'Development of a fitness app (iOS - written in Obj-C & Swift)'
         ]"
       />
@@ -263,15 +263,19 @@
         </h3>
         <div class="desc-awards">
           <p>
-            <strong>Scientific student conference (2010.) – II. place</strong><br>
+            <strong>Microsoft IoT Hackathon (2016.) – I. place</strong><br>
+            Artwork: Development of a selective garbage collection reward system (working on the mobile app, communicating with the Raspberry Pi waste bin).
+          </p>
+          <p>
+            <strong>Scientific student conference (2010.) - II. place</strong><br>
             Artwork: Intelligent, Wireless Scoliosis Diagnostic and Measurement System Development.
           </p>
           <p>
-            <strong>T-Mobile, MobilNet II. Competition (2009.) – II. place</strong><br>
+            <strong>T-Mobile, MobilNet II. Competition (2009.) - II. place</strong><br>
             Artwork: SMS sending using the Braille alphabet.
           </p>
           <p>
-            <strong>Scientific student conference (2008.) – II. place</strong><br>
+            <strong>Scientific student conference (2008.) - II. place</strong><br>
             Artwork: Development of a software based color temperature measuring device for mobile phones.
           </p>
         </div>

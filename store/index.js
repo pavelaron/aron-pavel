@@ -1,5 +1,4 @@
 const state = () => ({
-  cvUrl: null,
   speed: false,
   heading: {
     x: 0,
@@ -13,9 +12,6 @@ const mutations = {
   },
   turn (state, heading) {
     state.heading = heading
-  },
-  setCvUrl (state, cvUrl) {
-    state.cvUrl = cvUrl
   }
 }
 
