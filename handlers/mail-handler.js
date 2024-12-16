@@ -5,6 +5,8 @@ export default class MailHandler {
     const { name, email, subject, message } = data
 
     if (subject.value) {
+      await new Promise(resolve => setTimeout(resolve, 3000))
+
       return {
         data: {
           message: 'Message sent successfully!'
