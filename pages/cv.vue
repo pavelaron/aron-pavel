@@ -237,7 +237,7 @@
         position: absolute;
         width: 1mm;
         background-color: rgb(107, 66, 57);
-        left: 1.5mm;
+        left: 1.4mm;
         top: 2mm;
         bottom: 6mm;
       }
