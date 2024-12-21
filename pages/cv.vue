@@ -44,21 +44,20 @@
         </div>
       </div>
       <div class="content">
-        <h1>Aron Pavel</h1>
+        <h1>Áron Pável</h1>
         <h4>Mobile Application Developer</h4>
-
         <section class="section-cv">
           <h3>Education</h3>
           <hr>
           <ul class="list-education">
             <li class="item-timeline">
               <span>
-                <strong>2004 - 2010</strong> - Technical University of Budapest, Faculty of mechanical engineering.
+                <strong>2004 - 2010</strong> - Technical University of Budapest, Faculty of mechanical engineering
               </span>
             </li>
             <li class="item-timeline">
               <span>
-                <strong>1999 - 2004</strong> - Hunfalvy János, Bilingual High School of Foreign Trade and Economy - High school graduation.
+                <strong>1999 - 2004</strong> - Hunfalvy János, Bilingual High School of Foreign Trade and Economy - High school graduation
               </span>
             </li>
           </ul>
@@ -72,8 +71,8 @@
                 <strong>2021 - 2024</strong> - Full stack developer position at Splendex Ltd.
                 <div class="assignments">Assignments:</div>
                 <ul class="list-assignments">
-                  <li>Working on Mobile development (mostly React Native) projects.</li>
-                  <li>Development of an AI digital signage software for Raspberry Pi devices.</li>
+                  <li>Working on Mobile development (mostly React Native) projects</li>
+                  <li>Development of an AI digital signage software for Raspberry Pi devices</li>
                 </ul>
               </span>
             </li>
@@ -82,7 +81,7 @@
                 <strong>2019 - 2020</strong> - Backend/iOS developer position at Revolution Robotics Foundation
                 <div class="assignments">Assignments:</div>
                 <ul class="list-assignments">
-                  <li>Development of Robot Controller mobile app (iOS / React Native).</li>
+                  <li>Development of Robot Controller mobile app (iOS / React Native)</li>
                   <li>Development of API serving the mobile apps in Node JS</li>
                 </ul>
               </span>
@@ -92,7 +91,7 @@
                 <strong>2015 - 2018</strong> - Frontend/iOS developer position at Black Swan Data
                 <div class="assignments">Assignments:</div>
                 <ul class="list-assignments">
-                  <li>Development of in-flight entertainment system portals (frontend & iOS).</li>
+                  <li>Development of in-flight entertainment system portals (frontend & iOS)</li>
                   <li>Development of a fitness app (iOS - written in Obj-C & Swift)</li>
                 </ul>
               </span>
@@ -102,17 +101,17 @@
                 <strong>2012 - 2015</strong> - Android developer position at Canecom Ltd.
                 <div class="assignments">Assignments:</div>
                 <ul class="list-assignments">
-                  <li>Android application development and testing for clients.</li>
-                  <li>Mobilessence application development and testing.</li>
+                  <li>Android application development and testing for clients</li>
+                  <li>Mobilessence application development and testing</li>
                 </ul>
               </span>
             </li>
             <li class="item-timeline">
               <span>
-                <strong>2010 - 2011</strong> - Mobile software developer position at the Technical University of Budapest. - Spineguard project
+                <strong>2010 - 2011</strong> - Mobile software developer position at the Technical University of Budapest - Spineguard project
                 <div class="assignments">Assignments:</div>
                 <ul class="list-assignments">
-                  <li> Development, testing and design supervision of a mobile spinal mouse (tool for diagnosing scoliosis) application for Symbian devices (in Python S60 language).</li>
+                  <li>Development, testing and design supervision of a mobile spinal mouse (tool for diagnosing scoliosis) application for Symbian devices (in Python S60 language)</li>
                 </ul>
               </span>
             </li>
@@ -216,6 +215,7 @@
 
       .list-assignments {
         margin-left: 5mm;
+        list-style-image: initial;
       }
     }
 
@@ -225,15 +225,10 @@
       padding-left: 5mm;
 
       .item-timeline {
+        position: relative;
         padding-left: 5mm;
         margin-bottom: 5mm;
-      }
-
-      .item-timeline::marker {
-        display: inline-block;
-        content: '\2B24 ';
-        color: rgb(107, 66, 57);
-        vertical-align: middle;
+        list-style-image: url('@/assets/images/cv/timeline-dot.svg');
       }
 
       &::before {
@@ -242,14 +237,14 @@
         position: absolute;
         width: 1mm;
         background-color: rgb(107, 66, 57);
-        left: 1.9mm;
+        left: 1.5mm;
         top: 2mm;
-        bottom: 5mm;
+        bottom: 6mm;
       }
     }
 
     .list-professional::before {
-      bottom: 28mm;
+      bottom: 30mm;
     }
   }
 }
