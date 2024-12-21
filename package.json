@@ -34,6 +34,8 @@
     "babel-preset-env": "^1.7.0",
     "eslint": "^7.29.0",
     "eslint-plugin-nuxt": "^2.0.0",
-    "eslint-plugin-vue": "^7.12.1"
+    "eslint-plugin-vue": "^7.12.1",
+    "sass": "^1.83.0",
+    "sass-loader": "^10"
   }
 }

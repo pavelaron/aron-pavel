@@ -95,7 +95,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 main, #app {
   position: fixed;
   left: 0;
@@ -114,14 +114,14 @@ main {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   background-color: black;
-}
 
-#overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  cursor: crosshair;
+  #overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: crosshair;
+  }
 }
 </style>
