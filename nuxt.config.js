@@ -6,60 +6,56 @@ export default {
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
-  head () {
-    return {
-      title: 'Aron Pavel - Mobile Application Developer',
-      meta: [
-        { charset: 'utf-8' },
-        {
-            name: 'viewport',
-            content: this.$route?.path !== '/cv'
-              ? 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover'
-              : ''
-        },
-        { hid: 'description', name: 'description', content: 'Aron Pavel - Mobile Application Developer' },
-        { name: 'format-detection', content: 'telephone=no' },
-        { name: 'theme-color', content: '#000000' },
+  head: {
+    title: 'Aron Pavel - Mobile Application Developer',
+    meta: [
+      { charset: 'utf-8' },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover',
+      },
+      { hid: 'description', name: 'description', content: 'Aron Pavel - Mobile Application Developer' },
+      { name: 'format-detection', content: 'telephone=no' },
+      { name: 'theme-color', content: '#000000' },
 
-        { httpEquiv: 'X-UA-Compatible', content: 'IE=edge' },
-        { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
+      { httpEquiv: 'X-UA-Compatible', content: 'IE=edge' },
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
 
-        // Add to home screen for Safari on iOS
-        { name: 'apple-mobile-web-app-capable', content: 'yes' },
-        { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
-        { name: 'apple-mobile-web-app-title', content: 'Aron Pavel' },
+      // Add to home screen for Safari on iOS
+      { name: 'apple-mobile-web-app-capable', content: 'yes' },
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
+      { name: 'apple-mobile-web-app-title', content: 'Aron Pavel' },
 
-        // Add to home screen for Windows
-        { name: 'msapplication-TileImage', content: '/img/icons/msapplication-icon-144x144.png' },
-        { name: 'msapplication-TileColor', content: '#2d89ef' },
+      // Add to home screen for Windows
+      { name: 'msapplication-TileImage', content: '/img/icons/msapplication-icon-144x144.png' },
+      { name: 'msapplication-TileColor', content: '#2d89ef' },
 
-        // Twitter Card data
-        { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:site', content: '@aronpavel' },
-        { name: 'twitter:title', content: 'Aron Pavel' },
-        { name: 'twitter:description', content: 'Mobile Application Developer' },
-        { name: 'twitter:image', content: 'https://aron-pavel.web.app/img/logo.png' },
+      // Twitter Card data
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:site', content: '@aronpavel' },
+      { name: 'twitter:title', content: 'Aron Pavel' },
+      { name: 'twitter:description', content: 'Mobile Application Developer' },
+      { name: 'twitter:image', content: 'https://aron-pavel.web.app/img/logo.png' },
 
-        // Open Graph data
-        { property: 'og:title', content: 'Aron Pavel' },
-        { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://aron-pavel.web.app' },
-        { property: 'og:image', content: 'https://aron-pavel.web.app/img/logo.png' },
-        { property: 'og:description', content: 'Mobile Application Developer' },
-        { property: 'og:site_name', content: 'Aron Pavel' },
+      // Open Graph data
+      { property: 'og:title', content: 'Aron Pavel' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://aron-pavel.web.app' },
+      { property: 'og:image', content: 'https://aron-pavel.web.app/img/logo.png' },
+      { property: 'og:description', content: 'Mobile Application Developer' },
+      { property: 'og:site_name', content: 'Aron Pavel' },
 
-        { name: 'dc.publisher', content: 'https://aron-pavel.web.app' },
-        { name: 'dc.language', content: 'en' },
-        { name: 'dc.title', content: 'Aron Pavel' },
-        { name: 'dc.description', content: 'Mobile Application Developer' }
-      ],
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/img/icons/favicon.ico' },
-        { rel: 'apple-touch-icon', href: '/img/icons/apple-touch-icon-152x152.png' },
-        { rel: 'apple-touch-icon', sizes: '180x180', href: '/img/icons/apple-touch-icon.png' },
-        { rel: 'mask-icon', href: '/img/icons/safari-pinned-tab.svg', color: '#5bbad5' }
-      ]
-    }
+      { name: 'dc.publisher', content: 'https://aron-pavel.web.app' },
+      { name: 'dc.language', content: 'en' },
+      { name: 'dc.title', content: 'Aron Pavel' },
+      { name: 'dc.description', content: 'Mobile Application Developer' }
+    ],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/img/icons/favicon.ico' },
+      { rel: 'apple-touch-icon', href: '/img/icons/apple-touch-icon-152x152.png' },
+      { rel: 'apple-touch-icon', sizes: '180x180', href: '/img/icons/apple-touch-icon.png' },
+      { rel: 'mask-icon', href: '/img/icons/safari-pinned-tab.svg', color: '#5bbad5' }
+    ]
   },
 
   publicRuntimeConfig: {
@@ -147,6 +143,10 @@ export default {
       theme_color: '#000000'
     }
   },
+
+  ignore: [
+    process.env.ENVIROMENT === 'production' ? 'pages/cv.vue' : '',
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
