@@ -145,7 +145,7 @@ export default {
   },
 
   ignore: [
-    process.env.ENVIROMENT === 'production' ? 'pages/cv.vue' : '',
+    process.env.NODE_ENV === 'production' ? 'pages/cv.vue' : '',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
