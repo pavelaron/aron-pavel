@@ -66,54 +66,57 @@
           <h3>Professional experience</h3>
           <hr>
           <ul class="list-professional">
-            <li class="item-timeline">
+            <li v-for="position in require('@/assets/data/cv-professional.json')" :key="position.title" class="item-timeline">
               <span>
-                <strong>2021 - 2024</strong> - Full stack developer position at Splendex Ltd.
+                <strong>{{ position.start }} - {{ position.end }}</strong> - {{ position.title }}
                 <div class="assignments">Assignments:</div>
                 <ul class="list-assignments">
-                  <li>Working on Mobile development (mostly React Native) projects</li>
-                  <li>Development of an AI digital signage software for Raspberry Pi devices</li>
+                  <li v-for="assignment in position.assignments" :key="assignment">{{ assignment }}</li>
                 </ul>
               </span>
             </li>
-            <li class="item-timeline">
-              <span>
-                <strong>2019 - 2020</strong> - Backend/iOS developer position at Revolution Robotics Foundation
-                <div class="assignments">Assignments:</div>
-                <ul class="list-assignments">
-                  <li>Development of Robot Controller mobile app (iOS / React Native)</li>
-                  <li>Development of API serving the mobile apps in Node JS</li>
-                </ul>
-              </span>
+          </ul>
+        </section>
+        <section class="section-projects">
+          <h3>Projects developed</h3>
+          <hr>
+          <div class="container-projects">
+            <div v-for="project in require('@/assets/data/cv-projects.json')" :key="project.name" class="project">
+              <img :src="require(`@/assets/images/projects/${project.image}`)" :alt="project.name">
+              <span>{{ project.name }}</span>
+            </div>
+          </div>
+        </section>
+        <section class="section-skills">
+          <h3>Skills</h3>
+          <hr>
+          <ul>
+            <li>Android application development (including Wear OS) in Java & Kotlin</li>
+            <li>iOS application development in Objective-C & Swift</li>
+            <li>Application development for both platforms using React-Native</li>
+            <li>Application development for both platforms using Flutter</li>
+            <li>Progressive web app (PWA) development</li>
+          </ul>
+          <div class="web-technologies">
+            Web technologies used: PHP, Node JS, React, Next, Angular, Vue, Nuxt
+          </div>
+        </section>
+        <section class="section-references">
+          <h3>Website references</h3>
+          <hr>
+          <ul>
+            <li v-for="reference in require('@/assets/data/cv-references.json')" :key="reference.url">
+              <a :href="reference.url">{{ reference.url }}</a> - {{ reference.description }}
             </li>
-            <li class="item-timeline">
-              <span>
-                <strong>2015 - 2018</strong> - Frontend/iOS developer position at Black Swan Data
-                <div class="assignments">Assignments:</div>
-                <ul class="list-assignments">
-                  <li>Development of in-flight entertainment system portals (frontend & iOS)</li>
-                  <li>Development of a fitness app (iOS - written in Obj-C & Swift)</li>
-                </ul>
-              </span>
-            </li>
-            <li class="item-timeline">
-              <span>
-                <strong>2012 - 2015</strong> - Android developer position at Canecom Ltd.
-                <div class="assignments">Assignments:</div>
-                <ul class="list-assignments">
-                  <li>Android application development and testing for clients</li>
-                  <li>Mobilessence application development and testing</li>
-                </ul>
-              </span>
-            </li>
-            <li class="item-timeline">
-              <span>
-                <strong>2010 - 2011</strong> - Mobile software developer position at the Technical University of Budapest - Spineguard project
-                <div class="assignments">Assignments:</div>
-                <ul class="list-assignments">
-                  <li>Development, testing and design supervision of a mobile spinal mouse (tool for diagnosing scoliosis) application for Symbian devices (in Python S60 language)</li>
-                </ul>
-              </span>
+          </ul>
+        </section>
+        <section class="section-awards">
+          <h3>Awards, acknowledgements</h3>
+          <hr>
+          <ul>
+            <li v-for="award in require('@/assets/data/cv-awards.json')" :key="award.title">
+              <h5>{{ award.title }}</h5>
+              <div>Artwork: {{ award.artwork }}</div>
             </li>
           </ul>
         </section>
@@ -132,120 +135,159 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
+  background-color: rgb(222, 222, 222);
   margin: 0;
-  padding: 40px 30px;
+  padding: 0;
+}
+
+.paper {
+  display: flex;
+  width: 210mm;
+  height: calc(297mm * 2 - 30mm);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: white;
 
-  .paper {
+  .sidebar {
     display: flex;
-    width: 210mm;
-    height: 297mm;
-    background-color: white;
-    box-shadow:
-      0.9px 0.9px 3.6px rgba(0, 0, 0, 0.038),
-      2.5px 2.5px 10px rgba(0, 0, 0, 0.051),
-      6px 6px 24.1px rgba(0, 0, 0, 0.059),
-      20px 20px 80px rgba(0, 0, 0, 0.07)
-    ;
+    flex-direction: column;
+    width: 60mm;
+    background-color: rgb(107, 66, 57);
+    padding-top: 5mm;
+    color: white;
+  }
 
-    .sidebar {
-      display: flex;
-      flex-direction: column;
-      width: 60mm;
-      background-color: rgb(107, 66, 57);
-      padding-top: 5mm;
-      color: white;
-    }
+  .sidebar .container-info {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .sidebar .container-info {
-      display: flex;
-      flex-direction: column;
-    }
+  .sidebar .list-languages {
+    padding-left: 5mm;
+  }
 
-    .sidebar .list-languages {
-      padding-left: 5mm;
-    }
+  .sidebar h3 {
+    margin: 5mm;
+    text-decoration: underline;
+    text-transform: uppercase;
+  }
 
-    .sidebar h3 {
-      margin: 5mm;
-      text-decoration: underline;
+  .sidebar .item-info {
+    margin: 2mm 5mm;
+  }
+
+  .content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+    padding: 15mm 10mm;
+  }
+
+  .profile {
+    position: relative;
+    align-self: center;
+    width: 50mm;
+    height: 50mm;
+    margin: 5mm auto;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: white;
+    border-width: 2mm;
+  }
+
+  .section-cv {
+    margin: 6mm 0;
+
+    h3 {
       text-transform: uppercase;
     }
 
-    .sidebar .item-info {
-      margin: 2mm 5mm;
+    hr {
+      margin-bottom: 3mm;
     }
 
-    .content {
-      display: flex;
-      flex: 1;
-      flex-direction: column;
-      height: 100%;
-      padding: 15mm 10mm;
+    .assignments {
+      margin-top: 3mm;
+      text-decoration: underline;
     }
 
-    .profile {
-      position: relative;
-      align-self: center;
-      width: 50mm;
-      height: 50mm;
-      margin: 5mm auto;
-      border-radius: 50%;
-      border-style: solid;
-      border-color: white;
-      border-width: 2mm;
+    .list-assignments {
+      margin-left: 5mm;
+      list-style-image: initial;
     }
+  }
 
-    .section-cv {
-      margin: 6mm 0;
+  .section-projects {
+    margin-top: 40mm;
+  }
 
-      h3 {
-        text-transform: uppercase;
-      }
+  .list-education,
+  .list-professional {
+    position: relative;
+    padding-left: 5mm;
 
-      hr {
-        margin-bottom: 3mm;
-      }
-
-      .assignments {
-        margin-top: 3mm;
-        text-decoration: underline;
-      }
-
-      .list-assignments {
-        margin-left: 5mm;
-        list-style-image: initial;
-      }
-    }
-
-    .list-education,
-    .list-professional {
+    .item-timeline {
       position: relative;
       padding-left: 5mm;
-
-      .item-timeline {
-        position: relative;
-        padding-left: 5mm;
-        margin-bottom: 5mm;
-        list-style-image: url('@/assets/images/cv/timeline-dot.svg');
-      }
-
-      &::before {
-        content: '';
-        display: block;
-        position: absolute;
-        width: 1mm;
-        background-color: rgb(107, 66, 57);
-        left: 1.4mm;
-        top: 2mm;
-        bottom: 6mm;
-      }
+      margin-bottom: 5mm;
+      list-style-image: url('@/assets/images/cv/timeline-dot.svg');
     }
 
-    .list-professional::before {
-      bottom: 30mm;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 1mm;
+      background-color: rgb(107, 66, 57);
+      left: 0.5mm;
+      top: 2mm;
+      bottom: 7mm;
     }
+  }
+
+  .list-professional::before {
+    bottom: 30mm;
+  }
+
+  .container-projects {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 5mm;
+    column-gap: 2mm;
+    margin-top: 5mm;
+
+    .project {
+      text-align: center;
+    }
+
+    .project img {
+      width: 15mm;
+      height: 15mm;
+    }
+
+    .project span {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .section-skills,
+  .section-references,
+  .section-awards {
+    margin-top: 10mm;
+
+    ul {
+      margin-top: 5mm;
+      margin-left: 5mm;
+    }
+  }
+
+  .section-awards li {
+    margin-bottom: 2mm;
+  }
+
+  .web-technologies {
+    margin-top: 5mm;
   }
 }
 </style>

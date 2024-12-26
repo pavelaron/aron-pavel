@@ -1,0 +1,46 @@
+[
+  {
+    "start": "2021",
+    "end": "2024",
+    "title": "Full stack developer position at Splendex Ltd.",
+    "assignments": [
+      "Working on Mobile development (mostly React Native) projects",
+      "Development of an AI digital signage software for Raspberry Pi devices"
+    ]
+  },
+  {
+    "start": "2019",
+    "end": "2020",
+    "title": "Backend/iOS developer position at Revolution Robotics Foundation",
+    "assignments": [
+      "Development of Robot Controller mobile app (iOS / React Native)",
+      "Development of API serving the mobile apps in Node JS"
+    ]
+  },
+  {
+    "start": "2015",
+    "end": "2018",
+    "title": "Frontend/iOS developer position at Black Swan Data",
+    "assignments": [
+      "Development of in-flight entertainment system portals (frontend & iOS)",
+      "Development of a fitness app (iOS - written in Obj-C & Swift)"
+    ]
+  },
+  {
+    "start": "2012",
+    "end": "2015",
+    "title": "Android developer position at Canecom Ltd.",
+    "assignments": [
+      "Android application development and testing for clients",
+      "Mobilessence application development and testing"
+    ]
+  },
+  {
+    "start": "2010",
+    "end": "2011",
+    "title": "Mobile software developer position at the Technical University of Budapest - Spineguard project",
+    "assignments": [
+      "Development, testing and design supervision of a mobile spinal mouse (tool for diagnosing scoliosis) application for Symbian devices (in Python S60 language)"
+    ]
+  }
+]

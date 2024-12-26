@@ -9,7 +9,7 @@
       <a
         rel="noopener"
         class="menu-item"
-        href="/cv/aron-pavel-cv.pdf"
+        href="/cv/cv-aron-pavel.pdf"
         target="_blank"
         @click="downloadCV"
       >

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Vatera",
+    "image": "vatera.png"
+  },
+  {
+    "name": "Generali SMART autó",
+    "image": "generali-car.jpg"
+  },
+  {
+    "name": "Forbes Business Club",
+    "image": "forbes.png"
+  },
+  {
+    "name": "Liligo",
+    "image": "liligo.jpg"
+  },
+  {
+    "name": "Compocity",
+    "image": "compocity.png"
+  },
+  {
+    "name": "Fashion Street",
+    "image": "fashionstreet.png"
+  },
+  {
+    "name": "Digital Signage",
+    "image": "digital-signage.png"
+  },
+  {
+    "name": "MIT Sloan",
+    "image": "mit-sloan.jpg"
+  },
+  {
+    "name": "Pepsi TWIST Citrompótló",
+    "image": "pepsi-twist.jpg"
+  },
+  {
+    "name": "Robot Controller",
+    "image": "robot-controller.jpg"
+  }
+]
