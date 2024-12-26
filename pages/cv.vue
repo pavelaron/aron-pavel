@@ -126,6 +126,8 @@
 </template>
 
 <style scoped lang="scss">
+$pages: 2;
+
 * {
   margin: 0;
   padding: 0;
@@ -138,12 +140,13 @@
   background-color: rgb(222, 222, 222);
   margin: 0;
   padding: 0;
+  height: calc(297mm * $pages);
 }
 
 .paper {
   display: flex;
   width: 210mm;
-  height: calc(297mm * 2 - 30mm + 0.5px);
+  height: calc(297mm * $pages - 30mm + 0.5px);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: white;
 
