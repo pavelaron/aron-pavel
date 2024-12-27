@@ -23,15 +23,21 @@
           </div>
           <div class="item-info">
             <h4>Email address</h4>
-            <div>pavelaron84@gmail.com</div>
+            <div>
+              <a href="mailto:pavelaron84@gmail.com">pavelaron84@gmail.com</a>
+            </div>
           </div>
           <div class="item-info">
             <h4>Personal website</h4>
-            <div>https://aron-pavel.web.app</div>
+            <div>
+              <a href="https://aron-pavel.web.app">https://aron-pavel.web.app</a>
+            </div>
           </div>
           <div class="item-info">
             <h4>LinkedIn</h4>
-            <div>https://linkedin.com/in/aron-pavel</div>
+            <div>
+              <a href="https://linkedin.com/in/aron-pavel">https://linkedin.com/in/aron-pavel</a>
+            </div>
           </div>
           <div class="item-info">
             <h4>Spoken languages</h4>
@@ -139,8 +145,12 @@ $pages: 2;
   align-items: center;
   background-color: rgb(222, 222, 222);
   margin: 0;
-  padding: 0;
+  padding: 20px 0;
   height: calc(297mm * $pages);
+
+  &.paper {
+    padding: 0;
+  }
 }
 
 .paper {
@@ -176,6 +186,14 @@ $pages: 2;
 
   .sidebar .item-info {
     margin: 2mm 5mm;
+
+    a,
+    a:visited,
+    a:focus,
+    a:hover {
+      color: white;
+      background-color: transparent;
+    }
   }
 
   .content {
@@ -222,6 +240,10 @@ $pages: 2;
 
   .section-projects {
     margin-top: 40mm;
+
+    h3 {
+      text-transform: uppercase;
+    }
   }
 
   .list-education,
@@ -282,6 +304,10 @@ $pages: 2;
     ul {
       margin-top: 5mm;
       margin-left: 5mm;
+    }
+
+    h3 {
+      text-transform: uppercase;
     }
   }
 
