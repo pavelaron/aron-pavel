@@ -5,8 +5,8 @@ async function generateCV () {
     headless: true,
     executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
-
   })
+
   const page = await browser.newPage()
 
   await page.goto('http://localhost:3000/cv', {waitUntil: 'networkidle2'})
