@@ -52,7 +52,9 @@
           <span>Mechanical engineering firm landing page</span>
         </p>
         <h3>BlueSpeed</h3>
-        <a class="link-video-bluespeed" href="https://www.youtube.com/watch?v=_1kk1unkMIE" rel="noopener" target="_blank" />
+        <a class="link-video-bluespeed" href="https://www.youtube.com/watch?v=_1kk1unkMIE" rel="noopener" target="_blank">
+          {{ '' }}
+        </a>
       </div>
     </div>
   </div>
