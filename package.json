@@ -38,8 +38,6 @@
     "eslint-plugin-vue": "^7.12.1",
     "gulp": "^5.0.0",
     "puppeteer": "^23.11.1",
-    "puppeteer-core": "^23.11.1",
-    "sass": "^1.83.0",
-    "sass-loader": "^10"
+    "puppeteer-core": "^23.11.1"
   }
 }

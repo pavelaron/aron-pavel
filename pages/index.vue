@@ -95,7 +95,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 main, #app {
   position: fixed;
   left: 0;
