@@ -132,21 +132,23 @@
 </template>
 
 <style scoped>
-$pages: 2;
-
 * {
   margin: 0;
   padding: 0;
 }
 
 .container-cv {
+  --pages: 2;
+  --full-height: calc(var(--pages) * 297mm);
+  --color-primary: rgb(107, 66, 57);
+
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: rgb(222, 222, 222);
   margin: 0;
   padding: 20px 0;
-  height: calc(297mm * $pages);
+  height: var(--full-height);
 
   &.paper {
     padding: 0;
@@ -156,7 +158,7 @@ $pages: 2;
 .paper {
   display: flex;
   width: 210mm;
-  height: calc(297mm * $pages - 30mm + 0.5px);
+  height: calc(var(--full-height) - 30mm + 0.5px);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: white;
 
@@ -164,7 +166,7 @@ $pages: 2;
     display: flex;
     flex-direction: column;
     width: 60mm;
-    background-color: rgb(107, 66, 57);
+    background-color: var(--color-primary);
     padding-top: 5mm;
     color: white;
   }
@@ -262,8 +264,8 @@ $pages: 2;
       content: '';
       display: block;
       position: absolute;
+      background-color: var(--color-primary);
       width: 1mm;
-      background-color: rgb(107, 66, 57);
       left: 0.5mm;
       top: 2mm;
       bottom: 7mm;
