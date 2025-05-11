@@ -37,6 +37,8 @@
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.12.1",
     "gulp": "^5.0.0",
+    "less": "^4.3.0",
+    "less-loader": "^7.3.0",
     "puppeteer": "^23.11.1",
     "puppeteer-core": "^23.11.1"
   }

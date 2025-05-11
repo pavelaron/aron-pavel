@@ -1,7 +1,7 @@
 <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="16" height="16">
 	<title>Timeline dot</title>
 	<style>
-		.s0 { fill: #6b4239 }
+		.s0 { fill: #455a64 }
 		.s1 { fill: #ffffff }
 	</style>
 	<path id="Background" class="s0" d="m64 128c-35.4 0-64-28.6-64-64 0-35.4 28.6-64 64-64 35.4 0 64 28.6 64 64 0 35.4-28.6 64-64 64z"/>

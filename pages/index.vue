@@ -95,7 +95,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="less">
 main, #app {
   position: fixed;
   left: 0;

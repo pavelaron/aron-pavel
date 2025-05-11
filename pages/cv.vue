@@ -47,6 +47,14 @@
               <li>French - Advanced</li>
             </ul>
           </div>
+          <div class="item-info">
+            <h4>Interests</h4>
+            <ul class="list-interests">
+              <li>Artificial intelligence</li>
+              <li>Internet of things</li>
+              <li>Quantum computing</li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="content">
@@ -131,7 +139,7 @@
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="less">
 * {
   margin: 0;
   padding: 0;
@@ -140,7 +148,7 @@
 .container-cv {
   --pages: 2;
   --full-height: calc(var(--pages) * 297mm);
-  --color-primary: rgb(107, 66, 57);
+  --color-primary: rgb(69, 90, 100);
 
   display: flex;
   flex-direction: column;
@@ -176,7 +184,8 @@
     flex-direction: column;
   }
 
-  .sidebar .list-languages {
+  .sidebar .list-languages,
+  .sidebar .list-interests {
     padding-left: 5mm;
   }
 
