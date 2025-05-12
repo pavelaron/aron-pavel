@@ -65,7 +65,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@sweetalert2/theme-wordpress-admin/wordpress-admin.css',
+    '@/assets/css/wordpress-admin.css',
     '@/assets/css/global.css'
   ],
 
