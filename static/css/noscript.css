@@ -1,5 +1,9 @@
-body {
-  background-color: black;
+.container-noscript {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url('../img/bg-space.jpg');
   background-repeat: repeat;
   background-size: cover;
@@ -17,4 +21,15 @@ body {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+.message-noscript .ship {
+  width: 128px;
+  height: 128px;
+}
+
+.message-noscript .text {
+  width: 130px;
+  margin-top: 15px;
+  font-size: 20px;
 }

@@ -58,6 +58,12 @@ export default {
     ]
   },
 
+  loadingIndicator: {
+    name: 'three-bounce',
+    color: '#fff',
+    background: '#000'
+  },
+
   publicRuntimeConfig: {
     // Google Apps Script
     gasId: 'AKfycby6FtzwYLhH9fnEsOphMcuuhG-6QOMqCjSVXF8JlYStAMhiV47cVXbg0VaPSPzza-DXrg'
