@@ -1,6 +1,6 @@
 # Aron Pavel
 
-My personal website: https://aron-pavel.web.app
+My personal website: <a href="https://aron-pavel.web.app" target="_blank">https://aron-pavel.web.app</a>
 
 ## Build Setup
 
