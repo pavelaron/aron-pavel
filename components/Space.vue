@@ -84,11 +84,11 @@ export default {
         child.$options.name === SpaceElement.name
       ))
 
-      const xMin = Math.min(...spaceElements.map(element => element.x))
-      const yMin = Math.min(...spaceElements.map(element => element.y))
+      const xMin = Math.min(...spaceElements.map(({ x }) => x))
+      const yMin = Math.min(...spaceElements.map(({ y }) => y))
 
-      const xMax = Math.max(...spaceElements.map(element => element.x + element.$el.clientWidth))
-      const yMax = Math.max(...spaceElements.map(element => element.y + element.$el.clientHeight))
+      const xMax = Math.max(...spaceElements.map(({ x, $el }) => x + $el.clientWidth))
+      const yMax = Math.max(...spaceElements.map(({ y, $el }) => y + $el.clientHeight))
 
       this.contentBounds = {
         min: {
@@ -105,19 +105,19 @@ export default {
       this.speedModifier = this.speedBoundSize / 4
     },
     move () {
-      const heading = this.$store.state.heading
+      const { x, y } = this.$store.state.heading
 
-      const xMax = this.speedBoundSize * Math.sign(heading.x)
-      const yMax = this.speedBoundSize * Math.sign(heading.y)
+      const xMax = this.speedBoundSize * Math.sign(x)
+      const yMax = this.speedBoundSize * Math.sign(y)
 
-      let dX = heading.x
-      let dY = heading.y
+      let dX = x
+      let dY = y
 
-      if (Math.abs(heading.x) > this.speedBoundSize) {
+      if (Math.abs(x) > this.speedBoundSize) {
         dX = xMax
-        dY *= xMax / heading.x
-      } else if (Math.abs(heading.y) > this.speedBoundSize) {
-        dX *= yMax / heading.y
+        dY *= xMax / x
+      } else if (Math.abs(y) > this.speedBoundSize) {
+        dX *= yMax / y
         dY = yMax
       }
 
